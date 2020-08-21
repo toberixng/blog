@@ -7,8 +7,8 @@ const Blog = require('./models/blog');
 const app = express();
 
 // connect to mongodb & listen for requests
-const dbURI = "mongodb+srv://netninja:test1234@net-ninja-tuts-del96.mongodb.net/node-ts";
-// const dbURI = "mongodb+srv://netninja:test1234@net-ninja-tuts-del96.mongodb.net/node-tuts";
+// const dbURI = "mongodb+srv://netninja:test1234@net-ninja-tuts-del96.mongodb.net/node-ts";
+const dbURI = "mongodb+srv://toberixng:CyWb158qQVOSr9y9@signuptest.5one8.mongodb.net/niyibalogun?retryWrites=true&w=majority";
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(result => app.listen(3000))
@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 // mongoose & mongo tests
 app.get('/add-blog', (req, res) => {
     const blog = new Blog({
-        title: 'new blog',
+        title: 'new blog 2',
         snippet: 'about my new blog',
         body: 'more about my new blog'
     })
